@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <!--While making layouts, you might see some warnings appearing
+    which can be identified as the yellow highlighed code. As of now
+    you can choose to ignore these as it won't prevent the execution
+    of the app.-->
+
+    <!--We just taught about ImageView. Nothing new is done here-->
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        android:background="@null"
+        android:src="@drawable/fb_logo" />
+
+    <!--EditText: The text field which is capable of user input.
+    It works similar to the textview but this can accept user input.
+    Let's understand few attributes:
+    1. BackgroundTint: It is applied to the edittext to make the change
+    the color of the input field. This would not change the background
+    of the complete widget but will only change the outline part present
+
+    2. FontFamily: This is used to change the font of the text present either
+    in textview or edittext. We would like you to do a research on the internet
+    to know how to add a new font.
+
+    3. Hint: It is the text you see when the app user has not interacted with
+    the text field. You can also say the prompt which tell what to do in the app.
+
+    4. TextColor and TextColorHint refer to the color of the text inputted
+    and the color of the hint present respectively.-->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="80dp"
+        android:backgroundTint="#d3d3d3"
+        android:fontFamily="@font/average_sans"
+        android:hint="@string/email"
+        android:padding="10dp"
+        android:maxLines="1"
+        android:inputType="textEmailAddress"
+        android:textColor="@android:color/white"
+        android:textColorHint="#d3d3d3" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:maxLines="1"
+        android:backgroundTint="#d3d3d3"
+        android:fontFamily="@font/average_sans"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="#d3d3d3" />
+
+
+    <!--We already learned about the buttons-->
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="35dp"
+        android:background="#5c6bc0"
+        android:fontFamily="@font/average_sans"
+        android:padding="10dp"
+        android:text="@string/login"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtSignUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/sign_up"
+                android:textColor="@android:color/white" />
+
+
+            <TextView
+                android:id="@+id/txtForgotPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/forgot_password"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>
